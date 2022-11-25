@@ -18,7 +18,7 @@
   <div align=right>
     <div align=center>
       <div>
-        <img src="https://github-readme-stats.vercel.app/api?username=iamwotjr99&show_icons=true&theme=onedark" />
+        <img src="https://github-readme-stats.vercel.app/api?username=iamwotjr99&show_icons=true&theme=onedark&include_all_commits=true" />
       </div>
       <div>
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=iamwotjr99&layout=compact&theme=dark" />
