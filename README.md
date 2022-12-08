@@ -1,7 +1,7 @@
 <div style={{display: flex}}>
   <div aling=left>
     <div align=center>
-      <strong><h2>👋Hello world </strong><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fiamwotjr99&count_bg=%233DC86E&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=github&edge_flat=false" /></h2>
+      <strong><h2>👋Hello world </strong></h2>
       I'm a university student majoring in <strong>Computer Engineering</strong> at Dongguk University Gyeongju Campus.🤞🤞
       <img src="https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/baFr/image/42T6goM6HDWqtE3Wx4Zr6CVI_1Y.jpg" width="25%"/>
       <strong><h3>🥸Skills</h3></strong>
