@@ -40,6 +40,17 @@
 
 ---
 
+### 💼 진행 프로젝트
+
+#### 🗨 실시간 채팅 서비스
+- WebSocket + STOMP 기반 메시지 송수신
+- Redis Pub/Sub 기반 서버 간 메시지 브로드캐스팅
+- JWT 인증 + Kakao 소셜 로그인 구현
+- S3 Presigned URL 이미지 전송 + 조회 기능
+- EC2 + Docker Compose로 클라우드 배포
+
+---
+
 ### 🧠 공부 중인 것들
 
 - CS 기초 정리: 자료구조, 네트워크, DB, 운영체제
