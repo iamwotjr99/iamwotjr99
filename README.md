@@ -49,6 +49,13 @@
 - S3 Presigned URL 이미지 전송 + 조회 기능
 - EC2 + Docker Compose로 클라우드 배포
 
+#### 🎥 WebRTC 기반 온라인 스터디 서비스
+- React + WebRTC로 1:N 화상 회의 구현
+- Spring Boot 기반 WebSocket 시그널링 서버 직접 구현
+- Redis로 참가자 수 실시간 관리 및 상태 동기화
+- Docker Compose로 Azure VM에 배포
+- JWT 기반 로그인 인증 + 사용자 식별 처리
+
 ---
 
 ### 🧠 공부 중인 것들
