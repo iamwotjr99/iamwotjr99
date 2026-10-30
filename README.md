@@ -34,15 +34,15 @@
 ### 💼 Key Projects
 
 #### 📈 1. AssetMind — 실시간 주가 스트리밍 및 조건별 차트 조회 플랫폼
-> **2026.01 ~ 2026.06 | 4인 팀 프로젝트 (백엔드 아키텍처 및 API·파이프라인 전담, 기여도 100%)**[cite: 2]  
-> 한국투자증권(KIS) Open API를 연동하여 60개 주요 종목의 실시간 체결·호가 데이터를 유실 없이 수집·브로드캐스팅하고, 고성능 분봉 차트 조회를 제공하는 웹 플랫폼[cite: 2]
+> **2026.01 ~ 2026.06 | 4인 팀 프로젝트 (백엔드 아키텍처 및 API·파이프라인 전담, 기여도 100%)**
+> 한국투자증권(KIS) Open API를 연동하여 60개 주요 종목의 실시간 체결·호가 데이터를 유실 없이 수집·브로드캐스팅하고, 고성능 분봉 차트 조회를 제공하는 웹 플랫폼
 
-- **Tech Stack**: `Java 21`, `Spring Boot 3.5`, `Spring WebFlux`, `WebSocket(STOMP)`, `Redis(Lua)`, `PostgreSQL`, `JPA`, `k6`, `Prometheus`, `Grafana`, `Testcontainers`, `Spring REST Docs`[cite: 2]
+- **Tech Stack**: `Java 21`, `Spring Boot 3.5`, `Spring WebFlux`, `WebSocket(STOMP)`, `Redis(Lua)`, `PostgreSQL`, `JPA`, `k6`, `Prometheus`, `Grafana`, `Testcontainers`, `Spring REST Docs`
 - **주요 아키텍처 설계 및 트러블슈팅 성과**:
-  - **[차트 조회 DB 병목 해결]** k6 부하 테스트 시 DB 집계 연산으로 발생한 HikariCP 커넥션 풀 고갈 병목을 진단하고, 1분봉 단순 조회 후 WAS 메모리에서 롤업(Roll-up) 연산하도록 전환하여 **P95 응답 지연 52s → 42ms 단축(99.9% 개선), TPS 7/s → 153/s 향상(약 22배), 에러율 5% → 0% 달성**[cite: 2, 11]
-  - **[멀티 세션 분산 어댑터]** KIS 웹소켓 API의 계정당 세션 제한(40개) 제약을 극복하기 위해 3개 계정을 연동하여 총 120개 세션을 동적으로 할당·관리하는 커스텀 어댑터 구현[cite: 2]
-  - **[비동기 파이프라인 & 동시성 제어]** `ApplicationEventPublisher` 기반 이벤트 파이프라인으로 소켓 수신·적재·브로드캐스팅 스레드를 분리하고, `candle_update.lua` 기반 **Redis Lua Script & Write-Back** 구조와 인메모리 호가 쓰로틀링 적용[cite: 2]
-  - **[동적 DB 파티셔닝 & 헥사고날 아키텍처]** 누적되는 시계열 체결(`RawTick`) 데이터의 인덱스 비대화 방지를 위해 JDBC 기반 일자별 테이블 파티션 자동 생성 스케줄러를 구현하고, Port & Adapter 패턴 및 Spring REST Docs API 문서 자동화 구축[cite: 2]
+  - **[차트 조회 DB 병목 해결]** k6 부하 테스트 시 DB 집계 연산으로 발생한 HikariCP 커넥션 풀 고갈 병목을 진단하고, 1분봉 단순 조회 후 WAS 메모리에서 롤업(Roll-up) 연산하도록 전환하여 **P95 응답 지연 52s → 42ms 단축(99.9% 개선), TPS 7/s → 153/s 향상(약 22배), 에러율 5% → 0% 달성**
+  - **[멀티 세션 분산 어댑터]** KIS 웹소켓 API의 계정당 세션 제한(40개) 제약을 극복하기 위해 3개 계정을 연동하여 총 120개 세션을 동적으로 할당·관리하는 커스텀 어댑터 구현
+  - **[비동기 파이프라인 & 동시성 제어]** `ApplicationEventPublisher` 기반 이벤트 파이프라인으로 소켓 수신·적재·브로드캐스팅 스레드를 분리하고, `candle_update.lua` 기반 **Redis Lua Script & Write-Back** 구조와 인메모리 호가 쓰로틀링 적용
+  - **[동적 DB 파티셔닝 & 헥사고날 아키텍처]** 누적되는 시계열 체결(`RawTick`) 데이터의 인덱스 비대화 방지를 위해 JDBC 기반 일자별 테이블 파티션 자동 생성 스케줄러를 구현하고, Port & Adapter 패턴 및 Spring REST Docs API 문서 자동화 구축
 
 ---
 
