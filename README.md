@@ -75,9 +75,3 @@
 
 - **Email**: [iamwotjr@gmail.com](mailto:iamwotjr@gmail.com)
 - **GitHub**: [https://github.com/iamwotjr99](https://github.com/iamwotjr99)
-
----
-
-### 📊 GitHub Stats
-
-![Jaesuk's GitHub stats](https://github-readme-stats.vercel.app/api?username=iamwotjr99&show_icons=true&theme=default)
